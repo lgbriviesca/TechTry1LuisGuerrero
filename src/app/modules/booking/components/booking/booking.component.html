@@ -1,0 +1,27 @@
+<form [formGroup]="formBooking">
+    <div class="form-group">
+        <label for="exampleInputEmail1">E-mail</label>
+        <input formControlName="mail" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+            placeholder="Enter email">
+        <small id="emailHelp" class="form-text text-muted">Make sure you are using either a gmail or hotmail account</small>
+    </div>
+    <div class="form-group">
+        <label for="date">Date</label>
+        <input  max="{{maxDate | date:'yyyy-MM-dd'}}" min="{{minDate | date:'yyyy-MM-dd'}}" formControlName="date" type="date" class="form-control" id="date">
+    </div>
+    <div class="nameinput">
+        <label for="nameInput">Name</label>
+        <input formControlName="name" type="text" class="form-control" id="nameInput" placeholder="name">
+    </div>
+    <br>
+    <div class="nameinput">
+        <label for="exampleInputPassword1">Country</label>
+        <select class="select" formControlName="country">
+            <option value="" >Select your country</option>
+            <option *ngFor= "let item of items" [ngValue]="item" >{{item}}</option>
+        </select>
+    </div>
+    <button type="submit" (click)="show()" [disabled]="!form1.valid" class="btn btn-primary">Show booking data</button>
+</form>
+
+<!-- [max]="maxDate" -->

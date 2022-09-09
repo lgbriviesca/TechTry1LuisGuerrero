@@ -1,0 +1,9 @@
+<div class="wrapper">
+    <div class="nav-item main-button" *ngFor="let item of items">
+        <a class="btn btn-primary" [href]="item.url">{{item.name}}</a>
+    </div>
+    <div class="nav-item btn-dngr">
+        <a name="btn-dngr" id="" class="btn btn-danger" (click)="logOut()" role="button">Logout</a>
+    </div>
+</div>
+

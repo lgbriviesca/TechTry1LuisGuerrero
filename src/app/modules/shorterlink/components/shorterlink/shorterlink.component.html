@@ -1,0 +1,36 @@
+<div class="gral-container">
+    <div class="card border-primary">
+        <div class="container">
+            <h1>Welcome to the URL-shortener app</h1>
+            <div class="row">
+                <form [formGroup]="formShorterLink">
+                    <div class="form-group">
+                        <label for="url">Please, insert a url</label>
+                        <input type="url" formControlName="url" class="form-control" id="rol" placeholder="url">
+                    </div>
+                    <button type="submit" (click)="onSubmit()" class="btn btn-primary">Shorten URL</button>
+                </form>
+        
+            </div>
+        </div>
+      </div> 
+    
+      <div class="card border-primary links-card">
+        <div class="container links-container">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th class="th">Original URL</th> 
+                        <th>Short URL</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of items">
+                        <th class="card-title">{{item.oURL}}</th>
+                        <th class="card-text">{{item.shURL}}</th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        </div>
+      </div>
