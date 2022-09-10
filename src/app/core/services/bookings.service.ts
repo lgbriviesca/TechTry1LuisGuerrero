@@ -5,9 +5,9 @@ import { RequestService } from './request.service';
   providedIn: 'root',
 })
 
-/** Inicia la clase del objeto BookingsService.
+/** Inicia la clase BookingsService.
  *
- * El constructor utiliza la clase RoRequestServiceuter para poder interactuar con las APIS.
+ * El constructor utiliza la propiedad privada request, que se extiende de la clase RequestService para poder interactuar con las APIS.
  *
  * Implementa el método getCountries(), que RETORNA una petición GET a determinada API.
  * Sirve para poblar la opciones de país del formulario de reserva.

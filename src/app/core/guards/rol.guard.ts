@@ -8,16 +8,16 @@ import {
 } from '@angular/router';
 import { Observable } from 'rxjs';
 
-  /** Inicia la clase del objeto RolAGuard, que implementa la clase CanActivate.
-   *
-   * El constructor utiliza la clase Router para poder redireccionar.
-   *
-   * Protege las rutas: si el usuario ROL-B está en sesión, no permite acceder a las rutas del ROL-A:
-   * Declara la constante rol, que toma del localStorage la clave rol, si su valor es ROL-A,
-   * retorna true, de lo contrario, redirecciona a la ruta /shorterlink, a la cual sí puede acceder
-   * tal usuario. 
-   * 
-   * Exporta la clase RolAGuard*/
+/** Inicia la clase RolAGuard, que implementa la clase CanActivate.
+ *
+ * El constructor utiliza la propiedad privada router, que se extiende de la clase Router para poder redireccionar.
+ *
+ * Protege las rutas: si el usuario ROL-B está en sesión, no permite acceder a las rutas del ROL-A:
+ * Declara la constante rol, que toma del localStorage la clave rol, si su valor es ROL-A,
+ * retorna true, de lo contrario, redirecciona a la ruta /shorterlink, a la cual sí puede acceder
+ * tal usuario.
+ *
+ * Exporta la clase RolAGuard*/
 @Injectable({
   providedIn: 'root',
 })
